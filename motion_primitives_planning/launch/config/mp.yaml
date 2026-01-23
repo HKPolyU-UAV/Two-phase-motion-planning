@@ -1,0 +1,17 @@
+model:
+  CL:
+    k1: 0.03
+    k2: 0.028
+  CD:
+    k1: 0.001
+    k2: 0.002
+motion_primitive:
+  horizon_time: 3.0
+  V: 15.5
+  theata: 45.0
+  num: 29
+  max_roll_angle: 35.0
+  max_attack_angle: 25.0
+  min_attack_angle: -10.0
+  compensate_tau: 0.8
+  K_T: 2.2

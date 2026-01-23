@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+<group ns="suav1">
+<!-- Planning -->
+    <rosparam command="load" file="$(find motion_primitives_planning)/launch/config/mp.yaml" />
+    <rosparam command="load" file="$(find motion_primitives_planning)/launch/config/task.yaml" />
+    <node pkg="motion_primitives_planning" type="motion_primitives_test" name="mp_test" output="screen">
+    </node>
+
+    <!-- Visual Model -->
+    <arg name="model" default="$(find motion_primitives_planning)/launch/meshes/simple_airplane.urdf" />
+    <param name="urdf_model" command="$(find xacro)/xacro --inorder $(arg model)" />
+</group>
+
+<!-- RViz -->
+<arg name="rviz" default="true"/>
+<node if="$(arg rviz)" pkg="rviz" type="rviz" name="suav1_rviz" respawn="false" output="screen" args="-d $(find motion_primitives_planning)/launch/mp_test.rviz" />
+</launch>

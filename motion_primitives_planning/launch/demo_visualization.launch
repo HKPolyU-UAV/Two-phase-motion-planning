@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+<group ns="suav1">
+    <!-- Mavros -->
+    <include file="$(find mavros_launch)/launch/px4_fw.launch">
+    </include>
+    <node pkg="motion_primitives_planning" type="nav2tf" name="nav2tf" output="screen">
+    </node>
+    <node pkg="tf" type="static_transform_publisher" name="world_map_boardcaster" args="0 0 0 0 0 0 world map 1"/>
+
+    <!-- Visual Model -->
+    <arg name="model" default="$(find motion_primitives_planning)/launch/meshes/simple_airplane.urdf" />
+    <param name="urdf_model" command="$(find xacro)/xacro --inorder $(arg model)" />
+</group>
+
+<!-- RViz -->
+<arg name="rviz" default="true"/>
+<node if="$(arg rviz)" pkg="rviz" type="rviz" name="suav1_rviz" respawn="false" output="screen" args="-d $(find motion_primitives_planning)/launch/mavros_rviz.rviz" />
+</launch>
