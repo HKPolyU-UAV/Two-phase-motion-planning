@@ -1,12 +1,16 @@
 static_obstacles:
   num: 12
+  # Actual Gazebo column height; individual obstacles can override height and z.
+  height: 36.2743
   obs1: {x: 50.0, y: 0.0, r: 13.0}
   obs2: {x: 100.0, y: -50.0, r: 13.0}
   obs3: {x: 125.0, y: -50.0, r: 13.0}
   obs4: {x: 50.0, y: -100.0, r: 13.0}
   obs5: {x: 100.0, y: -125.0, r: 13.0}
   obs6: {x: 150.0, y: -125.0, r: 13.0}
+  obs7: {x: 225.0, y: -125.0, r: 13.0}
   obs8: {x: 225.0, y: -175.0, r: 13.0}
+  obs9: {x: 225.0, y: -200.0, r: 13.0}
   obs10: {x: 200.0, y: -200.0, r: 13.0}
   obs11: {x: 50.0, y: -187.0, r: 13.0}
   obs12: {x: 150.0, y: -237.0, r: 13.0}
@@ -14,11 +18,12 @@ static_obstacles:
 # 动态障碍物（Dynamic Obstacles）
 dynamic_obstacles:
   num: 3  # 假设添加 2 个动态障碍物
+  height: 10.0
   dyn_obs1:
     x: 150.0
     y: -200.0
     r: 5.0
-    type: "circular"  
+    type: "circular"
     center: {x: 150.0, y: -175.0}  # 圆心
     radius: 20.0      # 半径
     angular_velocity: 0.5  # 角速度 (rad/s)

@@ -4,7 +4,7 @@
 <launch>
   <arg name="mav_name"            default="fixedwing"/>
 
-  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/end.world"/>
+  <arg name="world" default="/home/tan/FW_mp/end.world"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="paused" value="true"/>
@@ -48,7 +48,7 @@
       <remap from="state" to="truth"/>
     </node>
 
-    <node name="pathplanner" pkg="rosplane" type="rosplane_path_planner"/> 
+    <node name="pathplanner" pkg="rosplane" type="rosplane_path_planner"/>
 
   </group>
 </launch>

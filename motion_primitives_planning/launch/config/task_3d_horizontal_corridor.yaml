@@ -1,0 +1,199 @@
+static_obstacles:
+  num: 94
+  # Actual Gazebo column height; individual obstacles can override height and z.
+  height: 36.2743
+  obs1: {x: 50.0, y: 0.0, r: 13.0}
+  obs2: {x: 100.0, y: -50.0, r: 13.0}
+  obs3: {x: 125.0, y: -50.0, r: 13.0}
+  obs4: {x: 50.0, y: -100.0, r: 13.0}
+  obs5: {x: 100.0, y: -125.0, r: 13.0}
+  obs6: {x: 150.0, y: -125.0, r: 13.0}
+  obs7: {x: 225.0, y: -125.0, r: 13.0}
+  obs8: {x: 225.0, y: -175.0, r: 13.0}
+  obs9: {x: 225.0, y: -200.0, r: 13.0}
+  obs10: {x: 200.0, y: -200.0, r: 13.0}
+  obs11: {x: 50.0, y: -187.0, r: 13.0}
+  obs12: {x: 150.0, y: -237.0, r: 13.0}
+
+  # Added route-side pillars; extra turning clearance in the original dense area.
+  obs13: {x: 6.27, y: -38.06, r: 6.00, height: 30.00, z: 15.00}
+  obs14: {x: 19.63, y: 36.94, r: 7.00, height: 50.00, z: 25.00}
+  obs15: {x: 46.30, y: -63.21, r: 8.00, height: 50.00, z: 25.00}
+  obs16: {x: 84.32, y: 3.23, r: 6.50, height: 56.00, z: 28.00}
+  obs17: {x: 99.32, y: 3.91, r: 6.00, height: 44.00, z: 22.00}
+  obs18: {x: 143.06, y: 0.77, r: 7.00, height: 30.00, z: 15.00}
+  obs19: {x: 132.02, y: -77.37, r: 7.00, height: 44.00, z: 22.00}
+  obs20: {x: 185.89, y: -23.61, r: 8.00, height: 40.00, z: 20.00}
+  obs21: {x: 212.28, y: -67.25, r: 6.50, height: 50.00, z: 25.00}
+  obs22: {x: 202.16, y: -148.57, r: 7.00, height: 56.00, z: 28.00}
+  obs23: {x: 152.50, y: -169.68, r: 7.00, height: 36.00, z: 18.00}
+  obs24: {x: 160.38, y: -209.07, r: 8.00, height: 56.00, z: 28.00}
+  obs25: {x: 182.15, y: -243.80, r: 6.50, height: 44.00, z: 22.00}
+  obs26: {x: 208.76, y: -263.97, r: 6.00, height: 30.00, z: 15.00}
+  obs27: {x: 247.28, y: -235.31, r: 7.00, height: 50.00, z: 25.00}
+  obs28: {x: 293.27, y: -296.57, r: 7.00, height: 40.00, z: 20.00}
+  obs29: {x: 276.98, y: -291.29, r: 8.00, height: 50.00, z: 25.00}
+  obs30: {x: 299.46, y: -250.24, r: 6.50, height: 56.00, z: 28.00}
+  obs31: {x: 318.00, y: -299.13, r: 6.50, height: 36.00, z: 18.00}
+  obs32: {x: 321.46, y: -248.19, r: 6.00, height: 44.00, z: 22.00}
+  obs33: {x: 355.22, y: -285.95, r: 6.00, height: 56.00, z: 28.00}
+  obs34: {x: 345.01, y: -242.19, r: 7.00, height: 30.00, z: 15.00}
+  obs35: {x: 387.07, y: -271.34, r: 7.00, height: 44.00, z: 22.00}
+  obs36: {x: 369.22, y: -225.98, r: 8.00, height: 40.00, z: 20.00}
+  obs37: {x: 414.82, y: -252.03, r: 8.00, height: 30.00, z: 15.00}
+  obs38: {x: 394.70, y: -209.81, r: 6.50, height: 50.00, z: 25.00}
+  obs39: {x: 442.42, y: -233.61, r: 6.50, height: 40.00, z: 20.00}
+  obs40: {x: 417.90, y: -189.31, r: 6.00, height: 36.00, z: 18.00}
+  obs41: {x: 468.50, y: -204.10, r: 6.00, height: 50.00, z: 25.00}
+  obs42: {x: 435.59, y: -172.95, r: 7.00, height: 56.00, z: 28.00}
+  obs43: {x: 484.16, y: -165.52, r: 7.00, height: 36.00, z: 18.00}
+  obs44: {x: 437.60, y: -150.53, r: 8.00, height: 44.00, z: 22.00}
+  obs45: {x: 484.92, y: -129.44, r: 8.00, height: 56.00, z: 28.00}
+  obs46: {x: 438.62, y: -122.71, r: 6.50, height: 30.00, z: 15.00}
+  obs47: {x: 484.56, y: -95.44, r: 6.50, height: 44.00, z: 22.00}
+  obs48: {x: 433.92, y: -92.92, r: 6.00, height: 40.00, z: 20.00}
+  obs49: {x: 477.63, y: -63.67, r: 6.00, height: 30.00, z: 15.00}
+  obs50: {x: 432.98, y: -61.18, r: 7.00, height: 50.00, z: 25.00}
+  obs51: {x: 475.65, y: -31.66, r: 7.00, height: 40.00, z: 20.00}
+  obs52: {x: 427.03, y: -29.68, r: 8.00, height: 36.00, z: 18.00}
+  obs53: {x: 470.69, y: -0.03, r: 8.00, height: 50.00, z: 25.00}
+  obs54: {x: 424.05, y: 2.20, r: 6.50, height: 56.00, z: 28.00}
+  obs55: {x: 466.36, y: 36.68, r: 6.50, height: 36.00, z: 18.00}
+  obs56: {x: 415.91, y: 27.95, r: 6.00, height: 44.00, z: 22.00}
+  obs57: {x: 440.30, y: 70.84, r: 6.00, height: 56.00, z: 28.00}
+  obs58: {x: 403.84, y: 44.39, r: 7.00, height: 30.00, z: 15.00}
+  obs59: {x: 410.97, y: 94.51, r: 7.00, height: 44.00, z: 22.00}
+  obs60: {x: 380.31, y: 56.51, r: 8.00, height: 40.00, z: 20.00}
+  obs61: {x: 379.25, y: 108.63, r: 8.00, height: 30.00, z: 15.00}
+  obs62: {x: 353.98, y: 69.28, r: 6.50, height: 50.00, z: 25.00}
+  obs63: {x: 348.59, y: 122.33, r: 6.50, height: 40.00, z: 20.00}
+  obs64: {x: 324.61, y: 77.73, r: 6.00, height: 36.00, z: 18.00}
+  obs65: {x: 317.36, y: 129.99, r: 6.00, height: 50.00, z: 25.00}
+  obs66: {x: 295.38, y: 91.04, r: 7.00, height: 56.00, z: 28.00}
+  obs67: {x: 286.52, y: 142.45, r: 7.00, height: 36.00, z: 18.00}
+  obs68: {x: 265.40, y: 98.44, r: 8.00, height: 44.00, z: 22.00}
+  obs69: {x: 251.36, y: 148.69, r: 8.00, height: 56.00, z: 28.00}
+  obs70: {x: 237.72, y: 103.90, r: 6.50, height: 30.00, z: 15.00}
+  obs71: {x: 217.50, y: 153.25, r: 6.50, height: 44.00, z: 22.00}
+  obs72: {x: 207.74, y: 103.49, r: 6.00, height: 40.00, z: 20.00}
+  obs73: {x: 184.84, y: 150.73, r: 6.00, height: 30.00, z: 15.00}
+  obs74: {x: 176.40, y: 106.82, r: 7.00, height: 50.00, z: 25.00}
+  obs75: {x: 152.87, y: 153.06, r: 7.00, height: 40.00, z: 20.00}
+  obs76: {x: 144.38, y: 105.14, r: 8.00, height: 36.00, z: 18.00}
+  obs77: {x: 120.86, y: 152.39, r: 8.00, height: 50.00, z: 25.00}
+  obs78: {x: 112.39, y: 106.47, r: 6.50, height: 56.00, z: 28.00}
+  obs79: {x: 87.27, y: 154.48, r: 6.50, height: 36.00, z: 18.00}
+  obs80: {x: 82.03, y: 103.76, r: 6.00, height: 44.00, z: 22.00}
+  obs81: {x: 49.15, y: 142.43, r: 6.00, height: 56.00, z: 28.00}
+  obs82: {x: 58.90, y: 98.52, r: 7.00, height: 30.00, z: 15.00}
+  obs83: {x: 16.29, y: 126.50, r: 7.00, height: 44.00, z: 22.00}
+  obs84: {x: 36.63, y: 82.13, r: 8.00, height: 40.00, z: 20.00}
+  obs85: {x: -10.38, y: 105.13, r: 8.00, height: 30.00, z: 15.00}
+  obs86: {x: 12.64, y: 64.42, r: 6.50, height: 50.00, z: 25.00}
+  obs87: {x: -36.55, y: 85.03, r: 6.50, height: 40.00, z: 20.00}
+  obs88: {x: -9.31, y: 42.34, r: 6.00, height: 36.00, z: 18.00}
+  obs89: {x: -58.47, y: 61.52, r: 6.00, height: 50.00, z: 25.00}
+  obs90: {x: -35.22, y: 23.32, r: 7.00, height: 56.00, z: 28.00}
+  obs91: {x: -83.74, y: 41.86, r: 7.00, height: 40.00, z: 20.00}
+  obs92: {x: -52.05, y: 5.82, r: 7.00, height: 52.00, z: 26.00}
+  obs93: {x: -106.27, y: 22.05, r: 7.00, height: 40.00, z: 20.00}
+  obs94: {x: -74.57, y: -14.00, r: 7.00, height: 52.00, z: 26.00}
+
+# 动态障碍物（Dynamic Obstacles）
+dynamic_obstacles:
+  num: 3  # 假设添加 2 个动态障碍物
+  height: 10.0
+  dyn_obs1:
+    x: 150.0
+    y: -200.0
+    r: 5.0
+    type: "circular"
+    center: {x: 150.0, y: -175.0}  # 圆心
+    radius: 20.0      # 半径
+    angular_velocity: 0.5  # 角速度 (rad/s)
+  dyn_obs2:
+    x: 200.0
+    y: -150.0
+    r: 8.0
+    type: "circular"  # 圆周运动
+    center: {x: 200.0, y: -150.0}  # 圆心
+    radius: 20.0      # 半径
+    angular_velocity: 0.3  # 角速度 (rad/s)
+  dyn_obs3:
+    x: 250.0
+    y: -250.0
+    r: 5.0
+    type: "circular"  # 圆周运动
+    center: {x: 250.0, y: -250.0}  # 圆心
+    radius: 30.0      # 半径
+    angular_velocity: 0.3  # 角速度 (rad/s)
+
+# Fixed horizontal cylinders; all static obstacles share the same blue colour.
+# axis_yaw is the horizontal cylinder-axis direction in degrees.
+# Regenerate horizontal_obstacles.world after changing this geometry.
+sphere_obstacles:
+  num: 0
+horizontal_obstacles:
+  num: 8
+  # Original three: doubled diameter (20 / 16 / 16 m), shortened to 120 m.
+  cylinder1: {x: 85.0, y: -35.0, z: 11.0, r: 10.0, length: 120.0, axis_yaw: 68.0}
+  cylinder2: {x: 178.0, y: -112.0, z: 26.0, r: 8.0, length: 120.0, axis_yaw: 0.0}
+  cylinder3: {x: 200.0, y: -235.0, z: 22.0, r: 8.0, length: 120.0, axis_yaw: 60.0}
+  # Five further cross-bars at staggered heights along a wide return loop.
+  cylinder4: {x: 365.0, y: -225.0, z: 12.0, r: 8.0, length: 120.0, axis_yaw: 116.0}
+  cylinder5: {x: 462.0, y: -70.0, z: 34.0, r: 8.0, length: 120.0, axis_yaw: 6.0}
+  cylinder6: {x: 340.0, y: 95.0, z: 16.0, r: 8.0, length: 120.0, axis_yaw: 64.0}
+  cylinder7: {x: 155.0, y: 125.0, z: 38.0, r: 8.0, length: 120.0, axis_yaw: 90.0}
+  cylinder8: {x: -25.0, y: 65.0, z: 20.0, r: 8.0, length: 120.0, axis_yaw: 125.0}
+
+waypoints:
+  num: 8
+  wp1: {x: 180.0, y: -75.0, h: 16.0}
+  wp2: {x: 175.0, y: -220.0, h: 22.0}
+  wp3: {x: 330.0, y: -285.0, h: 16.0}
+  wp4: {x: 470.0, y: -180.0, h: 18.0}
+  wp5: {x: 440.0, y: 60.0, h: 28.0}
+  wp6: {x: 250.0, y: 130.0, h: 22.0}
+  wp7: {x: 50.0, y: 130.0, h: 32.0}
+  wp8: {x: -95.0, y: 0.0, h: 26.0}
+
+horizontal_validation:
+  timeout: 180.0
+  final_tolerance: 55.0
+  height_tolerance: 3.0
+  end_clearance: 10.0
+  ground_size: [1400.0, 1400.0]
+  camera_pose: [210.0, -530.0, 430.0, 0.0, 0.85, 1.5707963268]
+  cases:
+    - name: horizontal_obs1
+      goal: [180.0, -75.0, 16.0]
+      approach: [0.0, 0.0, 2.0]
+      direction: above
+    - name: horizontal_obs2
+      goal: [175.0, -220.0, 22.0]
+      approach: [145.0, -40.0, 16.0]
+      direction: below
+    - name: horizontal_obs3
+      goal: [330.0, -285.0, 16.0]
+      approach: [175.0, -170.0, 22.0]
+      direction: either
+    - name: horizontal_obs4
+      goal: [470.0, -180.0, 18.0]
+      approach: [280.0, -260.0, 16.0]
+      direction: either
+    - name: horizontal_obs5
+      goal: [440.0, 60.0, 28.0]
+      approach: [425.0, -200.0, 18.0]
+      direction: either
+    - name: horizontal_obs6
+      goal: [250.0, 130.0, 22.0]
+      approach: [450.0, 10.0, 28.0]
+      direction: either
+    - name: horizontal_obs7
+      goal: [50.0, 130.0, 32.0]
+      approach: [300.0, 115.0, 22.0]
+      direction: either
+    - name: horizontal_obs8
+      goal: [-95.0, 0.0, 26.0]
+      approach: [100.0, 130.0, 32.0]
+      direction: either

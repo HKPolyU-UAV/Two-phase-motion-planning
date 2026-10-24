@@ -10,8 +10,24 @@ motion_primitive:
   V: 15.5
   theata: 45.0
   num: 29
+  # Heading samples x altitude layers: up to 29 x 7 = 203 primitives.
+  vertical_num: 7
+  max_climb_angle: 20.0
+  max_descent_angle: 20.0
+  min_altitude: 1.0
+  max_altitude: 80.0
+  vertical_clearance: 1.0
+  integration_dt: 0.02
+  min_speed: 3.0
+  max_speed: 45.0
+  max_thrust: 20.0
+  altitude_weight: 0.15
+  distance_weight: 0.02
+  heading_weight: 3.0
+  waypoint_altitude_tolerance: 3.0
   max_roll_angle: 35.0
   max_attack_angle: 25.0
-  min_attack_angle: -10.0
+  # At cruise speed, level trim is below -10 degrees; allow descent as well.
+  min_attack_angle: -20.0
   compensate_tau: 0.8
   K_T: 2.2

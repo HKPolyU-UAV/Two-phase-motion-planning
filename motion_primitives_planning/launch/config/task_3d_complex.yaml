@@ -1,0 +1,132 @@
+# Mixed 3D course: alternating horizontal gaps, vertical gates and moving cylinders.
+# All positions are in world metres. Circular obstacle x/y starts at angle zero.
+# Regenerate complex_3d.world after changing static geometry or the start pose.
+static_obstacles:
+  num: 58
+  # Tall left half-wall: pass on the +y side; climbing over it is outside the flight envelope.
+  obs1: {x: 90.0, y: -90.0, z: 40.0, r: 6.0, height: 80.0}
+  obs2: {x: 90.0, y: -80.0, z: 40.0, r: 6.0, height: 80.0}
+  obs3: {x: 90.0, y: -70.0, z: 40.0, r: 6.0, height: 80.0}
+  obs4: {x: 90.0, y: -60.0, z: 40.0, r: 6.0, height: 80.0}
+  obs5: {x: 90.0, y: -50.0, z: 40.0, r: 6.0, height: 80.0}
+  obs6: {x: 90.0, y: -40.0, z: 40.0, r: 6.0, height: 80.0}
+  obs7: {x: 90.0, y: -30.0, z: 40.0, r: 6.0, height: 80.0}
+  obs8: {x: 90.0, y: -20.0, z: 40.0, r: 6.0, height: 80.0}
+  obs9: {x: 90.0, y: -10.0, z: 40.0, r: 6.0, height: 80.0}
+  obs10: {x: 90.0, y: 0.0, z: 40.0, r: 6.0, height: 80.0}
+  # Tall right half-wall: return through the -y side.
+  obs11: {x: 190.0, y: 0.0, z: 40.0, r: 6.0, height: 80.0}
+  obs12: {x: 190.0, y: 10.0, z: 40.0, r: 6.0, height: 80.0}
+  obs13: {x: 190.0, y: 20.0, z: 40.0, r: 6.0, height: 80.0}
+  obs14: {x: 190.0, y: 30.0, z: 40.0, r: 6.0, height: 80.0}
+  obs15: {x: 190.0, y: 40.0, z: 40.0, r: 6.0, height: 80.0}
+  obs16: {x: 190.0, y: 50.0, z: 40.0, r: 6.0, height: 80.0}
+  obs17: {x: 190.0, y: 60.0, z: 40.0, r: 6.0, height: 80.0}
+  obs18: {x: 190.0, y: 70.0, z: 40.0, r: 6.0, height: 80.0}
+  obs19: {x: 190.0, y: 80.0, z: 40.0, r: 6.0, height: 80.0}
+  obs20: {x: 190.0, y: 90.0, z: 40.0, r: 6.0, height: 80.0}
+  # Low full-width gate: goal remains at 8 m, so pass above 11 m including clearance.
+  obs21: {x: 360.0, y: -90.0, z: 5.0, r: 6.0, height: 10.0}
+  obs22: {x: 360.0, y: -80.0, z: 5.0, r: 6.0, height: 10.0}
+  obs23: {x: 360.0, y: -70.0, z: 5.0, r: 6.0, height: 10.0}
+  obs24: {x: 360.0, y: -60.0, z: 5.0, r: 6.0, height: 10.0}
+  obs25: {x: 360.0, y: -50.0, z: 5.0, r: 6.0, height: 10.0}
+  obs26: {x: 360.0, y: -40.0, z: 5.0, r: 6.0, height: 10.0}
+  obs27: {x: 360.0, y: -30.0, z: 5.0, r: 6.0, height: 10.0}
+  obs28: {x: 360.0, y: -20.0, z: 5.0, r: 6.0, height: 10.0}
+  obs29: {x: 360.0, y: -10.0, z: 5.0, r: 6.0, height: 10.0}
+  obs30: {x: 360.0, y: 0.0, z: 5.0, r: 6.0, height: 10.0}
+  obs31: {x: 360.0, y: 10.0, z: 5.0, r: 6.0, height: 10.0}
+  obs32: {x: 360.0, y: 20.0, z: 5.0, r: 6.0, height: 10.0}
+  obs33: {x: 360.0, y: 30.0, z: 5.0, r: 6.0, height: 10.0}
+  obs34: {x: 360.0, y: 40.0, z: 5.0, r: 6.0, height: 10.0}
+  obs35: {x: 360.0, y: 50.0, z: 5.0, r: 6.0, height: 10.0}
+  obs36: {x: 360.0, y: 60.0, z: 5.0, r: 6.0, height: 10.0}
+  obs37: {x: 360.0, y: 70.0, z: 5.0, r: 6.0, height: 10.0}
+  obs38: {x: 360.0, y: 80.0, z: 5.0, r: 6.0, height: 10.0}
+  obs39: {x: 360.0, y: 90.0, z: 5.0, r: 6.0, height: 10.0}
+  # Fixed hanging gate: bottom 23 m/top 80 m; pass below 22 m while goal remains 24 m.
+  obs40: {x: 560.0, y: -90.0, z: 51.5, r: 6.0, height: 57.0}
+  obs41: {x: 560.0, y: -80.0, z: 51.5, r: 6.0, height: 57.0}
+  obs42: {x: 560.0, y: -70.0, z: 51.5, r: 6.0, height: 57.0}
+  obs43: {x: 560.0, y: -60.0, z: 51.5, r: 6.0, height: 57.0}
+  obs44: {x: 560.0, y: -50.0, z: 51.5, r: 6.0, height: 57.0}
+  obs45: {x: 560.0, y: -40.0, z: 51.5, r: 6.0, height: 57.0}
+  obs46: {x: 560.0, y: -30.0, z: 51.5, r: 6.0, height: 57.0}
+  obs47: {x: 560.0, y: -20.0, z: 51.5, r: 6.0, height: 57.0}
+  obs48: {x: 560.0, y: -10.0, z: 51.5, r: 6.0, height: 57.0}
+  obs49: {x: 560.0, y: 0.0, z: 51.5, r: 6.0, height: 57.0}
+  obs50: {x: 560.0, y: 10.0, z: 51.5, r: 6.0, height: 57.0}
+  obs51: {x: 560.0, y: 20.0, z: 51.5, r: 6.0, height: 57.0}
+  obs52: {x: 560.0, y: 30.0, z: 51.5, r: 6.0, height: 57.0}
+  obs53: {x: 560.0, y: 40.0, z: 51.5, r: 6.0, height: 57.0}
+  obs54: {x: 560.0, y: 50.0, z: 51.5, r: 6.0, height: 57.0}
+  obs55: {x: 560.0, y: 60.0, z: 51.5, r: 6.0, height: 57.0}
+  obs56: {x: 560.0, y: 70.0, z: 51.5, r: 6.0, height: 57.0}
+  obs57: {x: 560.0, y: 80.0, z: 51.5, r: 6.0, height: 57.0}
+  obs58: {x: 560.0, y: 90.0, z: 51.5, r: 6.0, height: 57.0}
+# The bridge creates these same moving cylinders in Gazebo from planner markers.
+# Their centres sweep across the final straight; the full-height mover requires
+# lateral avoidance, while the low and hanging movers leave vertical options.
+dynamic_obstacles:
+  num: 3
+  dyn_obs1:
+    x: 748.0
+    y: 0.0
+    z: 40.0
+    r: 6.0
+    height: 80.0
+    type: circular
+    center: {x: 730.0, y: 0.0}
+    radius: 18.0
+    angular_velocity: 0.13
+  dyn_obs2:
+    x: 811.0
+    y: 0.0
+    z: 6.0
+    r: 5.0
+    height: 12.0
+    type: circular
+    center: {x: 795.0, y: 0.0}
+    radius: 16.0
+    angular_velocity: 0.18
+  dyn_obs3:
+    x: 854.0
+    y: -8.0
+    z: 26.0
+    r: 5.0
+    height: 28.0
+    type: circular
+    center: {x: 840.0, y: -8.0}
+    radius: 14.0
+    angular_velocity: 0.15
+
+# Goals lie beyond the corresponding gates by more than the 48.825 m switch
+# distance, so the obstructed goal remains active throughout each passage.
+waypoints:
+  num: 4
+  wp1: {x: 280.0, y: 0.0, h: 8.0}
+  wp2: {x: 440.0, y: 0.0, h: 8.0}
+  wp3: {x: 640.0, y: 0.0, h: 24.0}
+  wp4: {x: 940.0, y: 0.0, h: 8.0}
+
+# Retained generator input; the mixed-course checker uses complex_validation.
+vertical_validation:
+  start_pose: [0.0, 0.0, 8.0, 0.0, 0.0, 0.0]
+  ground_size: [2200.0, 600.0]
+  camera_pose: [470.0, -900.0, 500.0, 0.0, 0.5, 1.5707963268]
+
+complex_validation:
+  radius: 7.2
+  half_width: 80.0
+  final_x: 880.0
+  final_height: 8.0
+  final_tolerance: 3.0
+  timeout: 120.0
+  dynamic_motion_min: 2.0
+  dynamic_encounter_distance: 20.0
+  gates:
+    - {name: left_slalom, x: 90.0, direction: left, threshold: 7.2, goal_height: 8.0, goal_y: 0.0}
+    - {name: right_slalom, x: 190.0, direction: right, threshold: -7.2, goal_height: 8.0, goal_y: 0.0}
+    - {name: climb, x: 360.0, direction: above, threshold: 11.0, goal_height: 8.0, goal_y: 0.0}
+    - {name: descent, x: 560.0, direction: below, threshold: 22.0, goal_height: 24.0, goal_y: 0.0}

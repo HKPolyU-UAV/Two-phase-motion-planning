@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
 <launch>
+<arg name="gazebo_dynamic_obstacles" default="true"/>
+<arg name="primitive_config" default="$(find motion_primitives_planning)/launch/config/mp.yaml"/>
+<arg name="task_config" default="$(find motion_primitives_planning)/launch/config/task.yaml"/>
 <group ns="suav1">
 <!-- Planning -->
-    <rosparam command="load" file="$(find motion_primitives_planning)/launch/config/mp.yaml" />
-    <rosparam command="load" file="$(find motion_primitives_planning)/launch/config/task.yaml" />
+    <rosparam command="load" file="$(arg primitive_config)" />
+    <!-- Switching back to a task without spheres must clear the previous count. -->
+    <param name="sphere_obstacles/num" value="0" type="int"/>
+    <param name="horizontal_obstacles/num" value="0" type="int"/>
+    <rosparam command="load" file="$(arg task_config)" />
     <node pkg="motion_primitives_planning" type="motion_primitives_test" name="mp_test" output="screen">
     </node>
+    <!-- Mirror the planner's dynamic obstacle markers into Gazebo. -->
+    <node if="$(arg gazebo_dynamic_obstacles)" pkg="motion_primitives_planning"
+          type="gazebo_dynamic_obstacles.py" name="gazebo_dynamic_obstacles" output="screen" />
 
     <!-- Visual Model -->
     <arg name="model" default="$(find motion_primitives_planning)/launch/meshes/simple_airplane.urdf" />
@@ -14,5 +23,6 @@
 
 <!-- RViz -->
 <arg name="rviz" default="true"/>
-<node if="$(arg rviz)" pkg="rviz" type="rviz" name="suav1_rviz" respawn="false" output="screen" args="-d $(find motion_primitives_planning)/launch/mp_test.rviz" />
+<arg name="rviz_config" default="$(find motion_primitives_planning)/launch/mp_test_3d.rviz"/>
+<node if="$(arg rviz)" pkg="rviz" type="rviz" name="suav1_rviz" respawn="false" output="screen" args="-d $(arg rviz_config)" />
 </launch>

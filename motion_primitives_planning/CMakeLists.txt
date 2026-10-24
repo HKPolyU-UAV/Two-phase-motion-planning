@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(motion_primitives_planning)
 
+# Catkin's default empty build type otherwise leaves the real-time planner
+# unoptimized. Preserve explicitly selected Debug/Release build settings.
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES
+   AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  add_compile_options(-O2)
+endif()
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -140,13 +147,13 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/motion_primitives_planning_node.cpp)
 add_executable(motion_primitives_test src/motion_primitives_test.cpp)
 add_dependencies(motion_primitives_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(motion_primitives_test 
+target_link_libraries(motion_primitives_test
   ${catkin_LIBRARIES}
 )
 
 add_executable(nav2tf src/nav2tf.cpp)
 add_dependencies(nav2tf ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(nav2tf 
+target_link_libraries(nav2tf
   ${catkin_LIBRARIES}
 )
 ## Rename C++ executable without prefix
@@ -173,10 +180,17 @@ target_link_libraries(nav2tf
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  scripts/gazebo_dynamic_obstacles.py
+  scripts/generate_3d_validation_world.py
+  scripts/verify_vertical_avoidance.py
+  scripts/verify_complex_avoidance.py
+  scripts/generate_sphere_world.py
+  scripts/verify_sphere_avoidance.py
+  scripts/generate_horizontal_world.py
+  scripts/verify_horizontal_avoidance.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
@@ -209,6 +223,16 @@ target_link_libraries(nav2tf
 #############
 ## Testing ##
 #############
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest_gtest(motion_primitives_3d_test
+    test/motion_primitives_3d.test
+    test/test_motion_primitives_3d.cpp
+  )
+  target_link_libraries(motion_primitives_3d_test ${catkin_LIBRARIES})
+  add_dependencies(motion_primitives_3d_test ${catkin_EXPORTED_TARGETS})
+endif()
 
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_motion_primitives_planning.cpp)
