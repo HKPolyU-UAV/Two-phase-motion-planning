@@ -196,6 +196,3 @@ simple-airplane/              Bundled simulator packages, meshes, plugin, and wo
 rosplane/                     Retained earlier ROSplane integration
 mavros_launch/                Retained earlier MAVROS launch files
 docs/images/                  Scene and validation figures
-```
-
-The bundled `simple-airplane` code includes modifications for these experiments and retains its [MIT license and original attribution](simple-airplane/LICENSE.md). Other components retain their own notices. The repository does not currently declare a single top-level license, and some package manifests still contain `TODO` license metadata; the simulator's MIT license should not be assumed to cover the entire repository.
