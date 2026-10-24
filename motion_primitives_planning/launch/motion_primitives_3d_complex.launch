@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Complete mixed-obstacle course; Gazebo and RViz share the same task geometry. -->
+  <arg name="gui" default="true"/>
+  <arg name="rviz" default="true"/>
+  <arg name="paused" default="true"/>
+  <arg name="verify" default="true"/>
+
+  <include file="$(find simple_airplane_gazebo)/launch/simple_airplane_empty_world.launch">
+    <arg name="world_name" value="$(find simple_airplane_gazebo)/worlds/complex_3d.world"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+  </include>
+  <include file="$(find motion_primitives_planning)/launch/motion_primitives_test.launch">
+    <arg name="task_config" value="$(find motion_primitives_planning)/launch/config/task_3d_complex.yaml"/>
+    <arg name="rviz_config" value="$(find motion_primitives_planning)/launch/mp_vertical_validation.rviz"/>
+    <arg name="gazebo_dynamic_obstacles" value="true"/>
+    <arg name="rviz" value="$(arg rviz)"/>
+  </include>
+  <group ns="suav1">
+    <node if="$(arg verify)" pkg="motion_primitives_planning" type="verify_complex_avoidance.py"
+          name="verify_complex_avoidance" output="screen"/>
+  </group>
+</launch>

@@ -1,0 +1,86 @@
+static_obstacles:
+  num: 12
+  # Actual Gazebo column height; individual obstacles can override height and z.
+  height: 36.2743
+  obs1: {x: 50.0, y: 0.0, r: 13.0}
+  obs2: {x: 100.0, y: -50.0, r: 13.0}
+  obs3: {x: 125.0, y: -50.0, r: 13.0}
+  obs4: {x: 50.0, y: -100.0, r: 13.0}
+  obs5: {x: 100.0, y: -125.0, r: 13.0}
+  obs6: {x: 150.0, y: -125.0, r: 13.0}
+  obs7: {x: 225.0, y: -125.0, r: 13.0}
+  obs8: {x: 225.0, y: -175.0, r: 13.0}
+  obs9: {x: 225.0, y: -200.0, r: 13.0}
+  obs10: {x: 200.0, y: -200.0, r: 13.0}
+  obs11: {x: 50.0, y: -187.0, r: 13.0}
+  obs12: {x: 150.0, y: -237.0, r: 13.0}
+
+# 动态障碍物（Dynamic Obstacles）
+dynamic_obstacles:
+  num: 3  # 假设添加 2 个动态障碍物
+  height: 10.0
+  dyn_obs1:
+    x: 150.0
+    y: -200.0
+    r: 5.0
+    type: "circular"
+    center: {x: 150.0, y: -175.0}  # 圆心
+    radius: 20.0      # 半径
+    angular_velocity: 0.5  # 角速度 (rad/s)
+  dyn_obs2:
+    x: 200.0
+    y: -150.0
+    r: 8.0
+    type: "circular"  # 圆周运动
+    center: {x: 200.0, y: -150.0}  # 圆心
+    radius: 20.0      # 半径
+    angular_velocity: 0.3  # 角速度 (rad/s)
+  dyn_obs3:
+    x: 250.0
+    y: -250.0
+    r: 5.0
+    type: "circular"  # 圆周运动
+    center: {x: 250.0, y: -250.0}  # 圆心
+    radius: 30.0      # 半径
+    angular_velocity: 0.3  # 角速度 (rad/s)
+
+# The previous spheres are replaced by long, fixed horizontal cylinders.
+# axis_yaw gives the horizontal cylinder-axis direction in degrees.
+# Regenerate horizontal_obstacles.world after changing this geometry.
+sphere_obstacles:
+  num: 0
+horizontal_obstacles:
+  num: 3
+  # Ground/floor excludes passing under this beam, so the aircraft must climb.
+  cylinder1: {x: 85.0, y: -35.0, z: 6.0, r: 5.0, length: 220.0, axis_yaw: 68.0}
+  # The lower opening is close to the 14 m goal height, favouring descent.
+  cylinder2: {x: 178.0, y: -112.0, z: 17.0, r: 4.0, length: 220.0, axis_yaw: 0.0}
+  # A final transverse beam permits either vertical passage, not an end bypass.
+  cylinder3: {x: 200.0, y: -235.0, z: 12.0, r: 4.0, length: 220.0, axis_yaw: 60.0}
+
+waypoints:
+  num: 3
+  wp1: {x: 180.0, y: -75.0, h: 8.0}
+  wp2: {x: 175.0, y: -220.0, h: 14.0}
+  wp3: {x: 300.0, y: -285.0, h: 12.0}
+
+horizontal_validation:
+  timeout: 120.0
+  final_tolerance: 55.0
+  height_tolerance: 3.0
+  end_clearance: 10.0
+  ground_size: [800.0, 800.0]
+  camera_pose: [150.0, -340.0, 260.0, 0.0, 0.85, 1.5707963268]
+  cases:
+    - name: horizontal_obs1
+      goal: [180.0, -75.0, 8.0]
+      approach: [0.0, 0.0, 2.0]
+      direction: above
+    - name: horizontal_obs2
+      goal: [175.0, -220.0, 14.0]
+      approach: [145.0, -40.0, 8.0]
+      direction: below
+    - name: horizontal_obs3
+      goal: [300.0, -285.0, 12.0]
+      approach: [175.0, -170.0, 14.0]
+      direction: either

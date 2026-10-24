@@ -1,0 +1,63 @@
+# Vertical-avoidance validation: each obstacle blocks a same-height goal.
+# Regenerate vertical_avoidance.world after changing obstacle geometry.
+static_obstacles:
+  num: 38
+  # Grounded barrier: fly above 11 m including clearance.
+  obs1: {x: 90.0, y: -90.0, z: 5.0, r: 6.0, height: 10.0}
+  obs2: {x: 90.0, y: -80.0, z: 5.0, r: 6.0, height: 10.0}
+  obs3: {x: 90.0, y: -70.0, z: 5.0, r: 6.0, height: 10.0}
+  obs4: {x: 90.0, y: -60.0, z: 5.0, r: 6.0, height: 10.0}
+  obs5: {x: 90.0, y: -50.0, z: 5.0, r: 6.0, height: 10.0}
+  obs6: {x: 90.0, y: -40.0, z: 5.0, r: 6.0, height: 10.0}
+  obs7: {x: 90.0, y: -30.0, z: 5.0, r: 6.0, height: 10.0}
+  obs8: {x: 90.0, y: -20.0, z: 5.0, r: 6.0, height: 10.0}
+  obs9: {x: 90.0, y: -10.0, z: 5.0, r: 6.0, height: 10.0}
+  obs10: {x: 90.0, y: 0.0, z: 5.0, r: 6.0, height: 10.0}
+  obs11: {x: 90.0, y: 10.0, z: 5.0, r: 6.0, height: 10.0}
+  obs12: {x: 90.0, y: 20.0, z: 5.0, r: 6.0, height: 10.0}
+  obs13: {x: 90.0, y: 30.0, z: 5.0, r: 6.0, height: 10.0}
+  obs14: {x: 90.0, y: 40.0, z: 5.0, r: 6.0, height: 10.0}
+  obs15: {x: 90.0, y: 50.0, z: 5.0, r: 6.0, height: 10.0}
+  obs16: {x: 90.0, y: 60.0, z: 5.0, r: 6.0, height: 10.0}
+  obs17: {x: 90.0, y: 70.0, z: 5.0, r: 6.0, height: 10.0}
+  obs18: {x: 90.0, y: 80.0, z: 5.0, r: 6.0, height: 10.0}
+  obs19: {x: 90.0, y: 90.0, z: 5.0, r: 6.0, height: 10.0}
+  # Hanging barrier: fly below 22 m including clearance.
+  obs20: {x: 270.0, y: -90.0, z: 51.5, r: 6.0, height: 57.0}
+  obs21: {x: 270.0, y: -80.0, z: 51.5, r: 6.0, height: 57.0}
+  obs22: {x: 270.0, y: -70.0, z: 51.5, r: 6.0, height: 57.0}
+  obs23: {x: 270.0, y: -60.0, z: 51.5, r: 6.0, height: 57.0}
+  obs24: {x: 270.0, y: -50.0, z: 51.5, r: 6.0, height: 57.0}
+  obs25: {x: 270.0, y: -40.0, z: 51.5, r: 6.0, height: 57.0}
+  obs26: {x: 270.0, y: -30.0, z: 51.5, r: 6.0, height: 57.0}
+  obs27: {x: 270.0, y: -20.0, z: 51.5, r: 6.0, height: 57.0}
+  obs28: {x: 270.0, y: -10.0, z: 51.5, r: 6.0, height: 57.0}
+  obs29: {x: 270.0, y: 0.0, z: 51.5, r: 6.0, height: 57.0}
+  obs30: {x: 270.0, y: 10.0, z: 51.5, r: 6.0, height: 57.0}
+  obs31: {x: 270.0, y: 20.0, z: 51.5, r: 6.0, height: 57.0}
+  obs32: {x: 270.0, y: 30.0, z: 51.5, r: 6.0, height: 57.0}
+  obs33: {x: 270.0, y: 40.0, z: 51.5, r: 6.0, height: 57.0}
+  obs34: {x: 270.0, y: 50.0, z: 51.5, r: 6.0, height: 57.0}
+  obs35: {x: 270.0, y: 60.0, z: 51.5, r: 6.0, height: 57.0}
+  obs36: {x: 270.0, y: 70.0, z: 51.5, r: 6.0, height: 57.0}
+  obs37: {x: 270.0, y: 80.0, z: 51.5, r: 6.0, height: 57.0}
+  obs38: {x: 270.0, y: 90.0, z: 51.5, r: 6.0, height: 57.0}
+
+dynamic_obstacles:
+  num: 0
+
+waypoints:
+  num: 3
+  wp1: {x: 170.0, y: 0.0, h: 8.0}
+  wp2: {x: 350.0, y: 0.0, h: 24.0}
+  wp3: {x: 520.0, y: 0.0, h: 8.0}
+
+# Used by the world generator and the validation recorder.
+vertical_validation:
+  start_pose: [0.0, 0.0, 8.0, 0.0, 0.0, 0.0]
+  half_width: 80.0
+  radius: 7.2
+  timeout: 60.0
+  gates:
+    - {name: climb, x: 90.0, direction: above, threshold: 11.0, goal_height: 8.0, start_height: 8.0}
+    - {name: descent, x: 270.0, direction: below, threshold: 22.0, goal_height: 24.0, start_height: 24.0}

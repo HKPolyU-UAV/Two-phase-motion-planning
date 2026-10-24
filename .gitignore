@@ -1,0 +1,26 @@
+# Catkin products and local ROS data
+build/
+devel/
+install/
+log/
+logs/
+.catkin_tools/
+.catkin_workspace
+.ros/
+*.bag
+*.bag.active
+
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+*~
+*.swp
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
