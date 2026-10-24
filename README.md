@@ -4,6 +4,16 @@ A ROS 1 research workspace for fixed-wing UAV motion planning in cluttered envir
 
 The repository retains the original ROSplane/MAVROS files and all scene presets developed during the 3D experiments. The quick start below uses the bundled `simple-airplane` simulator and the `motion_primitives_planning` package.
 
+## Demo video
+
+The recording shows the fixed-wing UAV navigating the 3D obstacle field, with RViz on the left and Gazebo on the right.
+
+[![3D motion-planning demo in RViz and Gazebo](docs/images/demo-preview.jpg)](docs/videos/demo.mp4?raw=true)
+
+**[Open or download the full demo](docs/videos/demo.mp4?raw=true)** — MP4, 1 min 42 s, 2560 × 1440, 31.9 MiB. Click the preview above or this link to access the original recording. Depending on your browser, the video may open in a player or download.
+
+## Scene overview
+
 ![Full-area obstacle field and measured flight](docs/images/full-area-obstacle-field.png)
 
 ## Features
