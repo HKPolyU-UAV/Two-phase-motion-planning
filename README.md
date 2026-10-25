@@ -6,7 +6,7 @@ The repository retains the original ROSplane/MAVROS files and all scene presets 
 
 ## Simulation demo
 
-The animation shows the fixed-wing UAV navigating the 3D obstacle field, with RViz on the left and Gazebo on the right. This recording predates the addition of pillars 226–231; the figures below show the updated scene.
+The animation shows the fixed-wing UAV navigating the 3D obstacle field, with RViz on the left and Gazebo on the right.
 
 ![Animated 3D motion-planning demo in RViz and Gazebo](docs/images/demo.gif)
 
