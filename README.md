@@ -86,29 +86,6 @@ roslaunch motion_primitives_planning motion_primitives_3d_horizontal.launch
 3. Observe the UAV turn, climb, and descend through the course. The red obstacles move in both Gazebo and RViz.
 4. Press **Ctrl+C in the launch terminal** to stop the complete session. Wait for its child processes to exit before starting another scene.
 
-This combined launch already starts both interfaces; a separate Gazebo or planner launch is unnecessary.
-
-### Nose camera
-
-![Live nose-camera image in the lower-left RViz panel](docs/images/front-camera.png)
-
-The **Front Camera** panel below Displays in RViz shows a forward-facing camera attached to the aircraft nose. The image follows the aircraft's roll, pitch, and heading. It uses a 640 × 360 RGB image, a 90° horizontal field of view, and a 15 Hz publication limit. Click Gazebo's **Play** button to start updating the view; pausing the simulation freezes it.
-
-RViz's Image display shows the raw camera image. Motion primitives remain visible in the main 3D view and are not overlaid on the camera panel.
-
-- Raw RGB image: `/suav1/front_camera/image_raw`
-- Camera calibration: `/suav1/front_camera/camera_info`
-- Optical TF frame: `suav1/front_camera_optical_frame`
-
-The shared camera definition is in `simple-airplane/simple_airplane_description/urdf/simple_airplane_front_camera.xacro`. The saved Gazebo worlds include the same sensor on the existing aircraft link, without adding mass or collision geometry. The camera is for visualization; the planner continues using the configured obstacle geometry.
-
-For a run without either graphical interface:
-
-```bash
-roslaunch motion_primitives_planning motion_primitives_3d_horizontal.launch \
-  gui:=false rviz:=false paused:=false
-```
-
 ## Preserved scene presets
 
 Each entry below is a complete Gazebo + RViz launch. Stop the previous session before switching presets.
