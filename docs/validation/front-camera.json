@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "frames": 276,
+  "resolution": [
+    640,
+    360
+  ],
+  "simulation_fps": 13.681592039800995,
+  "unique_timestamps": 276,
+  "unique_simulation_fps": 13.681592039800995,
+  "wall_fps": 13.61517640188511,
+  "frame_id": "suav1/front_camera_optical_frame",
+  "base_to_optical_translation": [
+    0.03,
+    0.0,
+    0.015
+  ],
+  "base_to_optical_quaternion": [
+    0.5,
+    -0.4999999999999999,
+    0.5,
+    -0.5000000000000001
+  ],
+  "world_to_optical_tf_available": true,
+  "camera_K": [
+    319.9988245765257,
+    0.0,
+    320.5,
+    0.0,
+    319.9988245765257,
+    180.5,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "mean_first_last_image_difference": 54.547686631944444,
+  "first_odom": [
+    0.02,
+    0.135,
+    0.0,
+    2.0
+  ],
+  "last_odom": [
+    20.18,
+    185.11679756920662,
+    -189.0877289013145,
+    22.596200624028473
+  ],
+  "rviz_camera_status": "Status: Ok",
+  "rviz_overlay_status": "Status: Ok",
+  "rviz_camera_dock": {
+    "x": 0,
+    "y": 705,
+    "width": 342,
+    "height": 241,
+    "floating": false,
+    "visible": true,
+    "area": 1
+  },
+  "overlay_geometry_tests_passed": 10,
+  "flight_regression": {
+    "status": "passed",
+    "passed": true,
+    "reason": "all rods crossed vertically, upward and downward avoidance and moving cylinders verified",
+    "elapsed_simulation_seconds": 94.2,
+    "min_rod_physical_clearance": 1.6396606513191845,
+    "min_configured_cylinder_clearance": 1.046351746781295,
+    "trajectory_hz": 7.108868060562365
+  },
+  "published_demo_build_passed": true
+}

@@ -119,4 +119,6 @@
       </plugin>
   </gazebo> -->
 
+  <xacro:include filename="$(find simple_airplane_description)/urdf/simple_airplane_front_camera.xacro"/>
+  <xacro:fixed_front_camera parent="base_link"/>
 </robot>

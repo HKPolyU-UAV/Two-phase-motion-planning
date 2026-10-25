@@ -149,6 +149,49 @@
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
+        <visual name="front_camera_housing">
+          <pose>0 0 0.015 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.04 0.05 0.04</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name="front_camera_lens">
+          <pose>0.025 0 0.015 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.012</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <sensor name="front_camera" type="camera">
+          <pose>0.03 0 0.015 0 0 0</pose>
+          <always_on>true</always_on>
+          <update_rate>15</update_rate>
+          <visualize>false</visualize>
+          <camera name="front_camera">
+            <horizontal_fov>1.5707963267948966</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>360</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>300</far>
+            </clip>
+          </camera>
+          <plugin filename="libgazebo_ros_camera.so" name="front_camera_controller">
+            <robotNamespace>/suav1</robotNamespace>
+            <cameraName>front_camera</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>front_camera_optical_frame</frameName>
+            <updateRate>15.0</updateRate>
+          </plugin>
+        </sensor>
       </link>
       <static>0</static>
       <plugin name='object_controller' filename='libgazebo_ros_planar_move_with_banking_and_pitching_plugin1.so'>

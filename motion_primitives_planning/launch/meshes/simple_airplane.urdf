@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot name="suav1" >
+<robot name="suav1" xmlns:xacro="http://ros.org/wiki/xacro">
     <link name="suav1/base_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -11,4 +11,6 @@
 
     </link>
 
+    <xacro:include filename="$(find simple_airplane_description)/urdf/simple_airplane_front_camera.xacro"/>
+    <xacro:fixed_front_camera parent="suav1/base_link" prefix="suav1/" gazebo_sensor="false"/>
 </robot>

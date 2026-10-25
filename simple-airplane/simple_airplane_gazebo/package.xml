@@ -51,6 +51,7 @@
   <run_depend>geometry_msgs</run_depend>
   <run_depend>nav_msgs</run_depend>
   <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
   <run_depend>simple_airplane_plugins</run_depend>
   <run_depend>simple_airplane_description</run_depend>
   <run_depend>robot_state_publisher</run_depend>

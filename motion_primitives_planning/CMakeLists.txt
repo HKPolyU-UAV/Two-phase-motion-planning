@@ -181,6 +181,7 @@ target_link_libraries(nav2tf
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
+  scripts/front_camera_primitives.py
   scripts/gazebo_dynamic_obstacles.py
   scripts/generate_3d_validation_world.py
   scripts/verify_vertical_avoidance.py

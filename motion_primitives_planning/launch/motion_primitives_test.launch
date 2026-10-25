@@ -12,6 +12,12 @@
     <rosparam command="load" file="$(arg task_config)" />
     <node pkg="motion_primitives_planning" type="motion_primitives_test" name="mp_test" output="screen">
     </node>
+    <!-- Keep near-lens trajectories out of the calibrated FPV image overlay. -->
+    <node pkg="motion_primitives_planning" type="front_camera_primitives.py"
+          name="front_camera_primitives" output="screen">
+      <param name="camera_frame" value="suav1/front_camera_optical_frame"/>
+      <param name="minimum_depth" value="5.0"/>
+    </node>
     <!-- Mirror the planner's dynamic obstacle markers into Gazebo. -->
     <node if="$(arg gazebo_dynamic_obstacles)" pkg="motion_primitives_planning"
           type="gazebo_dynamic_obstacles.py" name="gazebo_dynamic_obstacles" output="screen" />

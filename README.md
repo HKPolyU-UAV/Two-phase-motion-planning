@@ -22,6 +22,7 @@ The solid green line is the measured flight after adding six pillars directly on
 - Model-based trajectory rollouts with climb, descent, turning, and actuator response.
 - Collision checks for finite-height upright cylinders, spheres, oriented horizontal cylinders, and predicted moving obstacles.
 - One launch file starts Gazebo, RViz, the planner, and dynamic-obstacle synchronization.
+- A fixed nose camera streams live video with motion-primitive overlays in RViz's lower-left panel.
 - **Blue static obstacles** and **red dynamic obstacles** in both interfaces. Green lines show candidate trajectories.
 - Scene observers that verify vertical passages and obstacle motion without commanding the aircraft.
 
@@ -37,7 +38,7 @@ Pillars 226–231 were added on the previously measured flight path to break up 
 | ROS | ROS 1 Noetic |
 | Simulator | Gazebo Classic 11.15.1 |
 | Visualization | RViz for ROS Noetic |
-| Python | Python 3 with PyYAML |
+| Python | Python 3 with PyYAML and NumPy |
 
 These launch files target ROS 1 and Gazebo Classic. ROS 2 and the newer Gazebo simulator are not covered by this setup.
 
@@ -47,7 +48,7 @@ Start with an installed ROS Noetic environment. Install the demo dependencies:
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential git python3-yaml \
+sudo apt install -y build-essential git python3-yaml python3-numpy \
   ros-noetic-catkin ros-noetic-gazebo-ros-pkgs \
   ros-noetic-robot-state-publisher ros-noetic-xacro \
   ros-noetic-rviz ros-noetic-tf ros-noetic-rostest
@@ -86,6 +87,21 @@ roslaunch motion_primitives_planning motion_primitives_3d_horizontal.launch
 4. Press **Ctrl+C in the launch terminal** to stop the complete session. Wait for its child processes to exit before starting another scene.
 
 This combined launch already starts both interfaces; a separate Gazebo or planner launch is unnecessary.
+
+### Nose camera and trajectory overlay
+
+![Live nose-camera image with projected motion primitives in the lower-left RViz panel](docs/images/front-camera.png)
+
+The **Front Camera** panel below Displays in RViz shows a forward-facing camera attached to the aircraft nose. The image follows the aircraft's roll, pitch, and heading. It uses a 640 × 360 RGB image, a 90° horizontal field of view, and a 15 Hz publication limit. Click Gazebo's **Play** button to start updating the view; pausing the simulation freezes it.
+
+RViz's Camera display projects the green candidate primitives and the selected trajectory over the camera image. A visualization relay uses thin lines and clips segments within 5 m of the lens so nearby lines do not cover the view. Grid, robot, goal, and obstacle markers are hidden only in this camera panel; the main 3D view keeps its usual displays. These overlays are drawn by RViz and are not part of the raw Gazebo camera image.
+
+- Raw RGB image: `/suav1/front_camera/image_raw`
+- Camera calibration: `/suav1/front_camera/camera_info`
+- Clipped trajectory overlay: `/suav1/front_camera/primitives`
+- Optical TF frame: `suav1/front_camera_optical_frame`
+
+The shared camera definition is in `simple-airplane/simple_airplane_description/urdf/simple_airplane_front_camera.xacro`. The saved Gazebo worlds include the same sensor on the existing aircraft link, without adding mass or collision geometry. The camera is for visualization; the planner continues using the configured obstacle geometry.
 
 For a run without either graphical interface:
 
