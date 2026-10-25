@@ -182,33 +182,14 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/MarkerArray
+    - Class: rviz/Image
       Enabled: true
-      Marker Topic: /suav1/front_camera/primitives
-      Name: FPV Motion Primitives
-      Namespaces: {}
-      Queue Size: 1
-      Value: true
-    - Class: rviz/Camera
-      Enabled: true
-      Image Rendering: background
       Image Topic: /suav1/front_camera/image_raw
       Name: Front Camera
-      Overlay Alpha: 0.5
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
       Value: true
-      Visibility:
-        Grid: false
-        Odometry: false
-        Motion Primitives: false
-        FPV Motion Primitives: true
-        Obstacles: false
-        Marker: false
-        RobotModel: false
-        Value: true
-      Zoom Factor: 1
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236

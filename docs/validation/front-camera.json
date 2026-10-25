@@ -47,7 +47,6 @@
     22.596200624028473
   ],
   "rviz_camera_status": "Status: Ok",
-  "rviz_overlay_status": "Status: Ok",
   "rviz_camera_dock": {
     "x": 0,
     "y": 705,
@@ -57,7 +56,6 @@
     "visible": true,
     "area": 1
   },
-  "overlay_geometry_tests_passed": 10,
   "flight_regression": {
     "status": "passed",
     "passed": true,
@@ -67,5 +65,22 @@
     "min_configured_cylinder_clearance": 1.046351746781295,
     "trajectory_hz": 7.108868060562365
   },
-  "published_demo_build_passed": true
+  "display_class": "rviz/Image",
+  "primitive_overlay_enabled": false,
+  "main_view_primitives_enabled": true,
+  "image_only_display_validation": {
+    "received_frames": 99,
+    "image_status_name": "Status: Ok",
+    "dock": {
+      "x": 0,
+      "y": 705,
+      "width": 342,
+      "height": 241,
+      "floating": false,
+      "visible": true,
+      "area": 1
+    },
+    "fpv_marker_display_present": false,
+    "camera_green_pixels": 0
+  }
 }
