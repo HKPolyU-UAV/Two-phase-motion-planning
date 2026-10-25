@@ -1,0 +1,729 @@
+{
+  "passed": true,
+  "preservation": {
+    "old_upright_count": 225,
+    "new_upright_count": 231,
+    "appended_count": 6,
+    "all_existing_static_configurations_unchanged": true,
+    "all_nonstatic_yaml_sections_unchanged": true,
+    "waypoints_unchanged": true,
+    "dynamic_obstacles_unchanged": true,
+    "horizontal_obstacles_unchanged": true,
+    "existing_sdf_models_checked": 235,
+    "all_existing_sdf_models_unchanged": true,
+    "world_nonmodel_settings_unchanged": true,
+    "all_added_models_match_yaml": true,
+    "all_added_models_static_gravity_disabled_blue": true
+  },
+  "added_obstacles": {
+    "static_obs226": {
+      "x": 151.78,
+      "y": -44.34,
+      "r": 5.5,
+      "height": 18.5,
+      "z": 9.25
+    },
+    "static_obs227": {
+      "x": 294.05,
+      "y": -272.25,
+      "r": 5.0,
+      "height": 58.0,
+      "z": 29.0
+    },
+    "static_obs228": {
+      "x": 417.16,
+      "y": -219.84,
+      "r": 7.0,
+      "height": 20.5,
+      "z": 10.25
+    },
+    "static_obs229": {
+      "x": 462.77,
+      "y": -122.73,
+      "r": 5.0,
+      "height": 58.0,
+      "z": 29.0
+    },
+    "static_obs230": {
+      "x": 448.24,
+      "y": -0.07,
+      "r": 7.0,
+      "height": 30.5,
+      "z": 15.25
+    },
+    "static_obs231": {
+      "x": 104.88,
+      "y": 129.19,
+      "r": 5.0,
+      "height": 58.0,
+      "z": 29.0
+    }
+  },
+  "clearance_model": {
+    "subject": "odometry point, not full aircraft or wingspan",
+    "upright_radial_inflation_factor": 1.2,
+    "upright_vertical_clearance": 1.0,
+    "distance_sampling_max_segment_length_m": 0.1,
+    "intersection_check": "analytic intersection of consecutive odometry line segments and finite cylinders"
+  },
+  "baseline": {
+    "odometry_rows": 4655,
+    "elapsed_seconds": 93.08,
+    "obstacles": {
+      "static_obs226": {
+        "min_physical_clearance": -2.443532943394878,
+        "min_inflated_clearance": -3.4457848772221347,
+        "physical_intersecting_segments": 34,
+        "inflated_intersecting_segments": 42,
+        "closest_position": [
+          154.25781039856236,
+          -46.056742251122735,
+          16.056467056605122
+        ],
+        "closest_time": 11.1775,
+        "nearest_horizontal_distance_to_axis": 0.00306128556688106,
+        "nearest_horizontal_position": [
+          151.77849422802328,
+          -44.33733464447473,
+          16.16093255769615
+        ],
+        "height_over_top_at_nearest_horizontal_position": -2.3390674423038504,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -2.4962775553820613
+      },
+      "static_obs227": {
+        "min_physical_clearance": -4.997674274236518,
+        "min_inflated_clearance": -5.997674274236518,
+        "physical_intersecting_segments": 32,
+        "inflated_intersecting_segments": 40,
+        "closest_position": [
+          294.05089798048635,
+          -272.24785462558674,
+          16.302858616353173
+        ],
+        "closest_time": 30.49,
+        "nearest_horizontal_distance_to_axis": 0.0023257257634818943,
+        "nearest_horizontal_position": [
+          294.05089798048635,
+          -272.24785462558674,
+          16.302858616353173
+        ],
+        "height_over_top_at_nearest_horizontal_position": -41.69714138364682,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -41.71155719729706
+      },
+      "static_obs228": {
+        "min_physical_clearance": -2.4483680688581018,
+        "min_inflated_clearance": -3.4638240745107787,
+        "physical_intersecting_segments": 46,
+        "inflated_intersecting_segments": 54,
+        "closest_position": [
+          420.80148318683564,
+          -217.1237473986276,
+          18.0516319311419
+        ],
+        "closest_time": 39.79,
+        "nearest_horizontal_distance_to_axis": 0.002070033947032241,
+        "nearest_horizontal_position": [
+          417.15905550642657,
+          -219.8418420022887,
+          18.25735143598275
+        ],
+        "height_over_top_at_nearest_horizontal_position": -2.2426485640172515,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -2.5384652034750914
+      },
+      "static_obs229": {
+        "min_physical_clearance": -4.998025272362042,
+        "min_inflated_clearance": -5.998025272362042,
+        "physical_intersecting_segments": 34,
+        "inflated_intersecting_segments": 40,
+        "closest_position": [
+          462.7704598500583,
+          -122.73192043931641,
+          29.323136758370662
+        ],
+        "closest_time": 47.0,
+        "nearest_horizontal_distance_to_axis": 0.001974727637957707,
+        "nearest_horizontal_position": [
+          462.7704598500583,
+          -122.73192043931641,
+          29.323136758370662
+        ],
+        "height_over_top_at_nearest_horizontal_position": -28.676863241629338,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -28.81012920246736
+      },
+      "static_obs230": {
+        "min_physical_clearance": -1.9050824828750095,
+        "min_inflated_clearance": -2.9090851007126624,
+        "physical_intersecting_segments": 46,
+        "inflated_intersecting_segments": 56,
+        "closest_position": [
+          448.89695246510485,
+          -5.105829631199562,
+          28.59491751712499
+        ],
+        "closest_time": 54.665,
+        "nearest_horizontal_distance_to_axis": 0.001371884863726029,
+        "nearest_horizontal_position": [
+          448.24114433537375,
+          -0.0707566800061672,
+          28.62105465298179
+        ],
+        "height_over_top_at_nearest_horizontal_position": -1.8789453470182096,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -1.9284204046613809
+      },
+      "static_obs231": {
+        "min_physical_clearance": -4.99776211339358,
+        "min_inflated_clearance": -5.99776211339358,
+        "physical_intersecting_segments": 34,
+        "inflated_intersecting_segments": 40,
+        "closest_position": [
+          104.88019169086483,
+          129.18777033834954,
+          31.8045281928538
+        ],
+        "closest_time": 80.8,
+        "nearest_horizontal_distance_to_axis": 0.0022378866064205524,
+        "nearest_horizontal_position": [
+          104.88019169086483,
+          129.18777033834954,
+          31.8045281928538
+        ],
+        "height_over_top_at_nearest_horizontal_position": -26.1954718071462,
+        "bypass": "intersects",
+        "minimum_height_over_top_within_footprint": -26.609385658595375
+      }
+    },
+    "all_new_obstacles_block_old_flight": true
+  },
+  "measured": {
+    "odometry_rows": 4755,
+    "elapsed_seconds": 95.08,
+    "obstacles": {
+      "static_obs226": {
+        "min_physical_clearance": 1.1538004168262785,
+        "min_inflated_clearance": 0.0400780077476206,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          147.89329075362983,
+          -40.286201063122085,
+          19.647951395915243
+        ],
+        "closest_time": 10.88,
+        "nearest_horizontal_distance_to_axis": 1.4815817289940554,
+        "nearest_horizontal_position": [
+          152.62095901583504,
+          -43.12021626778565,
+          20.21717592896818
+        ],
+        "height_over_top_at_nearest_horizontal_position": 1.7171759289681816,
+        "bypass": "above",
+        "minimum_height_over_top_within_footprint": 1.1645736198137229
+      },
+      "static_obs227": {
+        "min_physical_clearance": 1.6450923742313481,
+        "min_inflated_clearance": 0.6450923742313481,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          290.4931233368513,
+          -277.86300998263994,
+          15.918086025810593
+        ],
+        "closest_time": 31.26,
+        "nearest_horizontal_distance_to_axis": 6.645092374231348,
+        "nearest_horizontal_position": [
+          290.4931233368513,
+          -277.86300998263994,
+          15.918086025810593
+        ],
+        "height_over_top_at_nearest_horizontal_position": -42.081913974189405,
+        "bypass": "lateral",
+        "minimum_height_over_top_within_footprint": null
+      },
+      "static_obs228": {
+        "min_physical_clearance": 2.126778657824927,
+        "min_inflated_clearance": 0.7267786578249265,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          422.9931713109554,
+          -226.85941601032278,
+          18.124353056343818
+        ],
+        "closest_time": 41.17,
+        "nearest_horizontal_distance_to_axis": 9.126778657824927,
+        "nearest_horizontal_position": [
+          422.9931713109554,
+          -226.85941601032278,
+          18.124353056343818
+        ],
+        "height_over_top_at_nearest_horizontal_position": -2.3756469436561822,
+        "bypass": "lateral",
+        "minimum_height_over_top_within_footprint": null
+      },
+      "static_obs229": {
+        "min_physical_clearance": 1.055193035662545,
+        "min_inflated_clearance": 0.055193035662544965,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          457.0992991646057,
+          -124.85332633728193,
+          25.900527462374452
+        ],
+        "closest_time": 48.84,
+        "nearest_horizontal_distance_to_axis": 6.055193035662545,
+        "nearest_horizontal_position": [
+          457.0992991646057,
+          -124.85332633728193,
+          25.900527462374452
+        ],
+        "height_over_top_at_nearest_horizontal_position": -32.099472537625545,
+        "bypass": "lateral",
+        "minimum_height_over_top_within_footprint": null
+      },
+      "static_obs230": {
+        "min_physical_clearance": 1.450469265388934,
+        "min_inflated_clearance": 0.05046926538893359,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          439.80073290075194,
+          -0.5049731403570358,
+          28.586175334333333
+        ],
+        "closest_time": 56.965,
+        "nearest_horizontal_distance_to_axis": 8.450469265388934,
+        "nearest_horizontal_position": [
+          439.80073290075194,
+          -0.5049731403570358,
+          28.586175334333333
+        ],
+        "height_over_top_at_nearest_horizontal_position": -1.9138246656666666,
+        "bypass": "lateral",
+        "minimum_height_over_top_within_footprint": null
+      },
+      "static_obs231": {
+        "min_physical_clearance": 1.004698831905154,
+        "min_inflated_clearance": 0.004698831905153966,
+        "physical_intersecting_segments": 0,
+        "inflated_intersecting_segments": 0,
+        "closest_position": [
+          106.47830853431071,
+          123.40192450886889,
+          32.0370722403968
+        ],
+        "closest_time": 82.685,
+        "nearest_horizontal_distance_to_axis": 6.004698831905154,
+        "nearest_horizontal_position": [
+          106.47830853431071,
+          123.40192450886889,
+          32.0370722403968
+        ],
+        "height_over_top_at_nearest_horizontal_position": -25.962927759603197,
+        "bypass": "lateral",
+        "minimum_height_over_top_within_footprint": null
+      }
+    },
+    "all_new_obstacles_clear": true
+  },
+  "full_course_validation": {
+    "status": "passed",
+    "passed": true,
+    "reason": "all rods crossed vertically, upward and downward avoidance and moving cylinders verified",
+    "rods": [
+      {
+        "name": "horizontal_obs1",
+        "center": [
+          85.0,
+          -35.0,
+          11.0
+        ],
+        "radius": 10.0,
+        "length": 120.0,
+        "goal": [
+          180.0,
+          -75.0,
+          16.0
+        ],
+        "expected_direction": "above",
+        "complete": true,
+        "passed": true,
+        "bypass": "above",
+        "samples": 100,
+        "goal_verified": true,
+        "min_physical_clearance": 3.186088197389944,
+        "min_inflated_clearance": 1.1860881973899442,
+        "closest_position": [
+          80.12104247844039,
+          -35.65141985144622,
+          23.472264989822847
+        ],
+        "min_passage_height": 20.62558779270251,
+        "max_passage_height": 26.132238222752743,
+        "max_abs_axial_position": 5.355917238050035,
+        "center_crossing_height": 24.846891174881208,
+        "center_crossing_axial_position": -1.0251862725789311,
+        "center_crossing_vertical_margin": 1.8468911748812058,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs2",
+        "center": [
+          178.0,
+          -112.0,
+          26.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          175.0,
+          -220.0,
+          22.0
+        ],
+        "expected_direction": "below",
+        "complete": true,
+        "passed": true,
+        "bypass": "below",
+        "samples": 62,
+        "goal_verified": true,
+        "min_physical_clearance": 2.739828744016741,
+        "min_inflated_clearance": 1.1398287440167407,
+        "closest_position": [
+          191.7117708261179,
+          -112.21198385645434,
+          15.262263539487897
+        ],
+        "min_passage_height": 15.141915248803619,
+        "max_passage_height": 15.529212750112553,
+        "max_abs_axial_position": 13.716982550999546,
+        "center_crossing_height": 15.259374604611157,
+        "center_crossing_axial_position": 13.709987610259416,
+        "center_crossing_vertical_margin": 1.1406253953888434,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs3",
+        "center": [
+          200.0,
+          -235.0,
+          22.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          330.0,
+          -285.0,
+          16.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "below",
+        "samples": 56,
+        "goal_verified": true,
+        "min_physical_clearance": 2.2410502171967206,
+        "min_inflated_clearance": 0.6410502171967205,
+        "closest_position": [
+          201.80648281408514,
+          -229.04240423703362,
+          11.85708336166643
+        ],
+        "min_passage_height": 11.268195744927256,
+        "max_passage_height": 13.461146008250063,
+        "max_abs_axial_position": 8.23870475362959,
+        "center_crossing_height": 11.682867036396855,
+        "center_crossing_axial_position": 5.7716340280289105,
+        "center_crossing_vertical_margin": 0.7171329636031452,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs4",
+        "center": [
+          365.0,
+          -225.0,
+          12.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          470.0,
+          -180.0,
+          18.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "above",
+        "samples": 67,
+        "goal_verified": true,
+        "min_physical_clearance": 2.5492005904744506,
+        "min_inflated_clearance": 0.9492005904744505,
+        "closest_position": [
+          381.9522232502143,
+          -259.15469380311293,
+          22.545893563956596
+        ],
+        "min_passage_height": 21.90605039608744,
+        "max_passage_height": 22.6040589446258,
+        "max_abs_axial_position": 39.932131580069075,
+        "center_crossing_height": 22.554384571258925,
+        "center_crossing_axial_position": -38.18296955763481,
+        "center_crossing_vertical_margin": 0.9543845712589256,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs5",
+        "center": [
+          462.0,
+          -70.0,
+          34.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          440.0,
+          60.0,
+          28.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "below",
+        "samples": 59,
+        "goal_verified": true,
+        "min_physical_clearance": 2.278913923607579,
+        "min_inflated_clearance": 0.678913923607579,
+        "closest_position": [
+          444.1067565390374,
+          -71.49013628409385,
+          23.728426003663756
+        ],
+        "min_passage_height": 23.677595040799954,
+        "max_passage_height": 24.244294373801928,
+        "max_abs_axial_position": 17.961980935038852,
+        "center_crossing_height": 23.71817367369265,
+        "center_crossing_axial_position": -17.94764965020802,
+        "center_crossing_vertical_margin": 0.6818263263073501,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs6",
+        "center": [
+          340.0,
+          95.0,
+          16.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          250.0,
+          130.0,
+          22.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "above",
+        "samples": 66,
+        "goal_verified": true,
+        "min_physical_clearance": 2.098484388433299,
+        "min_inflated_clearance": 0.4984843884332988,
+        "closest_position": [
+          341.9678190830967,
+          99.14447827363729,
+          26.098369570377535
+        ],
+        "min_passage_height": 25.538326796234333,
+        "max_passage_height": 26.101390133915935,
+        "max_abs_axial_position": 5.719041207968692,
+        "center_crossing_height": 26.097926180024917,
+        "center_crossing_axial_position": 4.5937887177049985,
+        "center_crossing_vertical_margin": 0.4979261800249173,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs7",
+        "center": [
+          155.0,
+          125.0,
+          38.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          50.0,
+          130.0,
+          32.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "below",
+        "samples": 60,
+        "goal_verified": true,
+        "min_physical_clearance": 1.926020161996247,
+        "min_inflated_clearance": 0.32602016199624684,
+        "closest_position": [
+          155.4370991179757,
+          129.0069399843651,
+          28.083608488093017
+        ],
+        "min_passage_height": 27.99448653144936,
+        "max_passage_height": 28.875130218637423,
+        "max_abs_axial_position": 4.189651249195863,
+        "center_crossing_height": 28.066537653669783,
+        "center_crossing_axial_position": 3.99820550981532,
+        "center_crossing_vertical_margin": 0.33346234633021865,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      },
+      {
+        "name": "horizontal_obs8",
+        "center": [
+          -25.0,
+          65.0,
+          20.0
+        ],
+        "radius": 8.0,
+        "length": 120.0,
+        "goal": [
+          -95.0,
+          0.0,
+          26.0
+        ],
+        "expected_direction": "either",
+        "complete": true,
+        "passed": true,
+        "bypass": "above",
+        "samples": 66,
+        "goal_verified": true,
+        "min_physical_clearance": 1.8292999371540013,
+        "min_inflated_clearance": 0.2292999371540012,
+        "closest_position": [
+          -25.46819295867623,
+          65.82386781009188,
+          29.828896729731618
+        ],
+        "min_passage_height": 29.271019955596493,
+        "max_passage_height": 29.83290139769032,
+        "max_abs_axial_position": 1.7903972991776649,
+        "center_crossing_height": 29.829544281191104,
+        "center_crossing_axial_position": 0.9355111780873773,
+        "center_crossing_vertical_margin": 0.2295442811911066,
+        "reason": "vertical passage verified with an unchanged blocked-height goal"
+      }
+    ],
+    "last_position": [
+      -56.362012324011616,
+      38.93754864957198,
+      26.956034996086885
+    ],
+    "elapsed_simulation_seconds": 95.0,
+    "min_rod_physical_clearance": 1.8292999371540013,
+    "min_configured_cylinder_clearance": 1.0056277690337714,
+    "dynamic_missing_samples": 0,
+    "dynamic_obstacles": [
+      {
+        "name": "dyn_obs1",
+        "max_observed_motion": 40.00000044310582,
+        "checked_samples": 4743,
+        "min_physical_clearance": 25.39849357933372
+      },
+      {
+        "name": "dyn_obs2",
+        "max_observed_motion": 39.99999091951365,
+        "checked_samples": 4743,
+        "min_physical_clearance": 23.908755481088463
+      },
+      {
+        "name": "dyn_obs3",
+        "max_observed_motion": 59.99999400536345,
+        "checked_samples": 4743,
+        "min_physical_clearance": 25.344670817536805
+      },
+      {
+        "name": "dyn_obs4",
+        "max_observed_motion": 23.99999587977158,
+        "checked_samples": 4743,
+        "min_physical_clearance": 220.5695830015933
+      },
+      {
+        "name": "dyn_obs5",
+        "max_observed_motion": 20.000001309706157,
+        "checked_samples": 4743,
+        "min_physical_clearance": 100.86962284069644
+      },
+      {
+        "name": "dyn_obs6",
+        "max_observed_motion": 19.999985151103775,
+        "checked_samples": 4743,
+        "min_physical_clearance": 33.13081872158476
+      },
+      {
+        "name": "dyn_obs7",
+        "max_observed_motion": 17.999932681642683,
+        "checked_samples": 4743,
+        "min_physical_clearance": 61.50281108348832
+      },
+      {
+        "name": "dyn_obs8",
+        "max_observed_motion": 23.9999497382579,
+        "checked_samples": 4743,
+        "min_physical_clearance": 79.95666613002638
+      },
+      {
+        "name": "dyn_obs9",
+        "max_observed_motion": 25.999940029680385,
+        "checked_samples": 4743,
+        "min_physical_clearance": 98.13857277716089
+      },
+      {
+        "name": "dyn_obs10",
+        "max_observed_motion": 19.999999592118908,
+        "checked_samples": 4743,
+        "min_physical_clearance": 87.3454511782773
+      },
+      {
+        "name": "dyn_obs11",
+        "max_observed_motion": 23.999989848004564,
+        "checked_samples": 4743,
+        "min_physical_clearance": 122.29310995636187
+      },
+      {
+        "name": "dyn_obs12",
+        "max_observed_motion": 19.99999782292313,
+        "checked_samples": 4743,
+        "min_physical_clearance": 101.46983952044141
+      }
+    ],
+    "clearance_model": "odometry point; finite horizontal cylinders with flat caps, original cylinders use configured radii",
+    "trajectory_frames": 784,
+    "trajectory_hz": 8.25426944971537,
+    "max_candidate_count": 203,
+    "max_candidate_z_spread": 37.109137535095215
+  },
+  "changed_files": [
+    "motion_primitives_planning/launch/config/task_3d_horizontal.yaml",
+    "simple-airplane/simple_airplane_gazebo/worlds/horizontal_obstacles.world"
+  ],
+  "rendering_check": {
+    "all_six_gazebo_and_rviz_poses_match": true,
+    "max_observed_position_difference_m": 1.3e-05
+  },
+  "scene_counts": {
+    "upright_static": 231,
+    "horizontal_static": 8,
+    "dynamic": 12,
+    "waypoints": 8
+  },
+  "run_conditions": {
+    "gazebo_gui": false,
+    "rviz": false,
+    "integration_dt": 0.01
+  }
+}

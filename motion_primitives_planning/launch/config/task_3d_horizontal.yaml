@@ -1,5 +1,5 @@
 static_obstacles:
-  num: 225
+  num: 231
   # Actual Gazebo column height; individual obstacles can override height and z.
   height: 36.2743
   obs1: {x: 50.0, y: 0.0, r: 13.0}
@@ -231,6 +231,15 @@ static_obstacles:
   obs223: {x: 276.00, y: 184.00, r: 6.00, height: 50.00, z: 25.00}
   obs224: {x: 60.00, y: 184.00, r: 6.00, height: 58.00, z: 29.00}
   obs225: {x: 360.00, y: -176.00, r: 6.00, height: 26.00, z: 13.00}
+
+  # Added on the measured flight path: low pillars permit overflight; tall pillars require a detour.
+  # Existing obstacles and all waypoints remain unchanged.
+  obs226: {x: 151.78, y: -44.34, r: 5.50, height: 18.50, z: 9.25}
+  obs227: {x: 294.05, y: -272.25, r: 5.00, height: 58.00, z: 29.00}
+  obs228: {x: 417.16, y: -219.84, r: 7.00, height: 20.50, z: 10.25}
+  obs229: {x: 462.77, y: -122.73, r: 5.00, height: 58.00, z: 29.00}
+  obs230: {x: 448.24, y: -0.07, r: 7.00, height: 30.50, z: 15.25}
+  obs231: {x: 104.88, y: 129.19, r: 5.00, height: 58.00, z: 29.00}
 
 # 动态障碍物（Dynamic Obstacles）
 dynamic_obstacles:

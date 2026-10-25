@@ -6,13 +6,15 @@ The repository retains the original ROSplane/MAVROS files and all scene presets 
 
 ## Simulation demo
 
-The animation shows the fixed-wing UAV navigating the 3D obstacle field, with RViz on the left and Gazebo on the right.
+The animation shows the fixed-wing UAV navigating the 3D obstacle field, with RViz on the left and Gazebo on the right. This recording predates the addition of pillars 226–231; the figures below show the updated scene.
 
 ![Animated 3D motion-planning demo in RViz and Gazebo](docs/images/demo.gif)
 
 ## Scene overview
 
-![Full-area obstacle field and measured flight](docs/images/full-area-obstacle-field.png)
+![Updated obstacle field with six added pillars and measured flight comparison](docs/images/full-area-obstacle-field.png)
+
+The solid green line is the measured flight after adding six pillars directly on the previous flight path; the dashed gray line is the previous flight. Labels 226–231 identify the new pillars. All existing obstacles and all eight target waypoints remain unchanged.
 
 ## Features
 
@@ -23,7 +25,9 @@ The animation shows the fixed-wing UAV navigating the 3D obstacle field, with RV
 - **Blue static obstacles** and **red dynamic obstacles** in both interfaces. Green lines show candidate trajectories.
 - Scene observers that verify vertical passages and obstacle motion without commanding the aircraft.
 
-The default full-area scene contains **225 upright cylinders, 8 horizontal cylinders, and 12 moving cylinders**. Obstacles cover a rectangle spanning **X = −130 to 530 m** and **Y = −330 to 200 m**, including areas outside the flight route. The eight horizontal cylinders are 120 m long; the first has a 20 m diameter and the others have 16 m diameters.
+The default full-area scene contains **231 upright cylinders, 8 horizontal cylinders, and 12 moving cylinders**. Obstacles cover a rectangle spanning **X = −130 to 530 m** and **Y = −330 to 200 m**, including areas outside the flight route. The eight horizontal cylinders are 120 m long; the first has a 20 m diameter and the others have 16 m diameters.
+
+Pillars 226–231 were added on the previously measured flight path to break up the open corridor. They comprise three 58 m pillars and three lower pillars measuring 18.5, 20.5, and 30.5 m. In the updated validation flight, the UAV flew over pillar 226 and passed laterally around pillars 227–231. The original 225 upright cylinders, eight horizontal cylinders, twelve moving obstacles, and all waypoint coordinates and altitudes are unchanged.
 
 ## Tested environment
 
@@ -103,7 +107,7 @@ Each entry below is a complete Gazebo + RViz launch. Stop the previous session b
 | Three long horizontal cylinders | `motion_primitives_3d_horizontal_thin.launch` | 12 upright cylinders + 3 horizontal cylinders, 220 m long | 3 |
 | Eight thick horizontal cylinders | `motion_primitives_3d_horizontal_eight.launch` | 12 upright cylinders + 8 horizontal cylinders, 120 m long | 3 |
 | Dense route corridor | `motion_primitives_3d_horizontal_corridor.launch` | 94 upright cylinders + 8 horizontal cylinders | 3 |
-| **Full-area obstacle field — default** | **`motion_primitives_3d_horizontal.launch`** | **225 upright cylinders + 8 horizontal cylinders** | **12** |
+| **Full-area obstacle field — default** | **`motion_primitives_3d_horizontal.launch`** | **231 upright cylinders + 8 horizontal cylinders** | **12** |
 
 For example:
 
@@ -166,9 +170,9 @@ rosparam get /suav1/verify_horizontal_avoidance/summary
 
 The `passed` parameter is created when validation finishes; it is absent while the run is still pending. The observer checks that all configured horizontal cylinders are crossed vertically away from their ends, both upward and downward passages occur, moving obstacles are observed moving, and the final target is approached within the configured tolerances. Set `verify:=false` on a validation preset to disable its observer.
 
-In the development environment, the full-area scene completed its validation in approximately **93 simulated seconds**, with **12 moving obstacles synchronized** and an observed planning publication rate of approximately **9.5 Hz** with both interfaces open. These measurements describe that run; timing depends on hardware, rendering load, and configuration. The observer checks clearance of the **odometry point with configured obstacle margins**, not the full aircraft mesh or wingspan.
+In the development environment, the updated full-area scene completed its validation in approximately **95 simulated seconds**, with **12 moving obstacles synchronized** and an observed planning publication rate of approximately **8.3 Hz** with both graphical interfaces disabled. These measurements describe that run; timing depends on hardware, rendering load, and configuration. All eight horizontal-cylinder passages passed, and the recorded flight cleared all six added pillars. A comparison of the configurations and generated worlds confirmed that every pre-existing obstacle and target remained unchanged. See the [updated validation measurements](docs/validation/full-area-route-blockers.json). The checks use the **odometry point with configured obstacle margins**, not the full aircraft mesh or wingspan.
 
-![Measured vertical passages through eight horizontal cylinders](docs/images/horizontal-cylinder-validation.png)
+![Measured vertical passages through eight horizontal cylinders after adding pillars 226–231](docs/images/horizontal-cylinder-validation.png)
 
 ## Simulator interface
 
@@ -196,3 +200,5 @@ simple-airplane/              Bundled simulator packages, meshes, plugin, and wo
 rosplane/                     Retained earlier ROSplane integration
 mavros_launch/                Retained earlier MAVROS launch files
 docs/images/                  Scene and validation figures
+docs/validation/              Recorded validation measurements
+```

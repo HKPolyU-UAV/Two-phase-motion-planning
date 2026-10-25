@@ -6793,6 +6793,174 @@
         </visual>
       </link>
     </model>
+    <model name="static_obs226">
+      <static>true</static>
+      <pose>151.78 -44.34 9.25 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>5.5</radius>
+              <length>18.5</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>5.5</radius>
+              <length>18.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="static_obs227">
+      <static>true</static>
+      <pose>294.05 -272.25 29.0 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="static_obs228">
+      <static>true</static>
+      <pose>417.16 -219.84 10.25 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>7.0</radius>
+              <length>20.5</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>7.0</radius>
+              <length>20.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="static_obs229">
+      <static>true</static>
+      <pose>462.77 -122.73 29.0 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="static_obs230">
+      <static>true</static>
+      <pose>448.24 -0.07 15.25 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>7.0</radius>
+              <length>30.5</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>7.0</radius>
+              <length>30.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="static_obs231">
+      <static>true</static>
+      <pose>104.88 129.19 29.0 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>5.0</radius>
+              <length>58.0</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
     <model name="horizontal_obs1">
       <static>true</static>
       <pose>85.0 -35.0 11.0 0 1.5707963267948966 1.1868238913561442</pose>
